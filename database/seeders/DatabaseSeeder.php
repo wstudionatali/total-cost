@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,9 +16,21 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+     //   User::factory()->create([
+      //      'name' => 'Test User',
+       //     'email' => 'test@example.com',
+       // ]);
+
+        DB::table('products')->insert([
+            ['name' => 'Fruit tee',
+            'code' => 'FR1',
+            'price' => '3.11'],
+            ['name' => 'Strawberries',
+            'code' => 'SR1',
+            'price' => '5.00'],
+            ['name' => 'Coffee',
+            'code' => 'SF1',
+            'price' => '11.23'],
         ]);
     }
 }
