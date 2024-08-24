@@ -3,7 +3,7 @@
 Our supermarket guests for global reach has promted us to open new supermarket - we sell only 3 product:
 
 |  Product code  |  Product name  | Price
---------------------------------------------
+|                |                |
 | FR1            | Fruit tee      |$3.11
 | SR1            | Strawberries   |$5.00
 | SF1            | Coffee         |$11.23
@@ -18,9 +18,10 @@ $co = new Checkout($pricing_rules);
 $co->scan($item);
 $co->scan($item);
 $sum = $co->total;
+
 Implement a checkout system that fulfil this requirements:
 Test data
-_______________________________
+
 Basket: FR1, SR1, FR1, FR1, SF1
 Total sum expected: $22.45
 
@@ -39,11 +40,11 @@ id, code, name, price
 Session saves cart(scaned) products.
 
 home page:
-------------------------------------
+
 Product name (price)  Scan  Remove
 Product name (price)  Scan  Remove
 Product name (price)  Scan  Remove
-------------------------------------
+
 Remove all
 
 Scaned produces:
@@ -51,11 +52,10 @@ Scaned produces:
  Code:Quantity
  Code:Quantity
 
-Total:  Sum
-  
--------------------------------------
+Total:  Sum  
 
-To seed Product table with products run:
+
+#### To seed Product table with products run:
    php artisan migrate:refresh --seed
 
 
