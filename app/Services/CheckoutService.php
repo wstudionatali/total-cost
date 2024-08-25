@@ -9,7 +9,7 @@ class CheckoutService
         'SR1'=> ['bulk_discount', 3, 4.50],
          ];
     public float $total = 0;
-    private mixed $cart;
+    private array $cart;
     public function __construct() {
       $this->cart  = session()->get('cart', []);
     }
